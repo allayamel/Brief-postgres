@@ -1,0 +1,86 @@
+
+voyage_db=# SELECT  vol.id,vol.jour, avion.* FROM vol inner join avion on vol.avion_id=avion.id;
+ id |    jour    | id | compagnie  |    modele    |     capacite     
+----+------------+----+------------+--------------+------------------
+  1 | 2021-12-31 | 11 | Realmix    | Riviera      | Twila Gartside
+  2 | 2021-02-06 | 13 | Reallinks  | Mazda5       | Urson Wabersinke
+  3 | 2021-03-21 |  6 | Kayveo     | SLK55 AMG    | Letta Quarry
+  4 | 2021-05-04 |  8 | Feednation | Express 2500 | Dirk Tremellier
+  5 | 2021-07-10 | 16 | Eidel      | Milan        | Gabey Cammocke
+  6 | 2021-03-13 | 17 | Jabbercube | Legacy       | Dulcie Cromly
+  7 | 2021-03-03 | 11 | Realmix    | Riviera      | Twila Gartside
+  8 | 2021-06-30 | 14 | Layo       | XK           | Ulla Almond
+  9 | 2021-04-22 |  9 | Photojam   | Trans Sport  | Hale Remmer
+ 10 | 2021-05-15 | 19 | Einti      | Ram Van 2500 | Paolo Johnys
+ 11 | 2021-06-27 |  8 | Feednation | Express 2500 | Dirk Tremellier
+ 12 | 2021-04-16 |  7 | Agivu      | A6           | Linnea Vaines
+ 13 | 2021-11-10 |  8 | Feednation | Express 2500 | Dirk Tremellier
+ 14 | 2021-05-26 |  8 | Feednation | Express 2500 | Dirk Tremellier
+ 15 | 2021-03-27 |  2 | Wikizz     | Explorer     | Elianore Cruwys
+ 16 | 2021-07-29 |  7 | Agivu      | A6           | Linnea Vaines
+ 17 | 2021-04-01 | 13 | Reallinks  | Mazda5       | Urson Wabersinke
+ 18 | 2021-11-08 | 11 | Realmix    | Riviera      | Twila Gartside
+ 19 | 2021-02-02 | 19 | Einti      | Ram Van 2500 | Paolo Johnys
+ 20 | 2021-03-28 |  9 | Photojam   | Trans Sport  | Hale Remmer
+(20 lignes)
+
+SELECT  vol.id,vol.jour, avion.* FROM vol right join avion on vol.avion_id=avion.id
+
+ id |    jour    | id | compagnie  |    modele     |     capacite      
+----+------------+----+------------+---------------+-------------------
+  1 | 2021-12-31 | 11 | Realmix    | Riviera       | Twila Gartside
+  2 | 2021-02-06 | 13 | Reallinks  | Mazda5        | Urson Wabersinke
+  3 | 2021-03-21 |  6 | Kayveo     | SLK55 AMG     | Letta Quarry
+  4 | 2021-05-04 |  8 | Feednation | Express 2500  | Dirk Tremellier
+  5 | 2021-07-10 | 16 | Eidel      | Milan         | Gabey Cammocke
+  6 | 2021-03-13 | 17 | Jabbercube | Legacy        | Dulcie Cromly
+  7 | 2021-03-03 | 11 | Realmix    | Riviera       | Twila Gartside
+  8 | 2021-06-30 | 14 | Layo       | XK            | Ulla Almond
+  9 | 2021-04-22 |  9 | Photojam   | Trans Sport   | Hale Remmer
+ 10 | 2021-05-15 | 19 | Einti      | Ram Van 2500  | Paolo Johnys
+ 11 | 2021-06-27 |  8 | Feednation | Express 2500  | Dirk Tremellier
+ 12 | 2021-04-16 |  7 | Agivu      | A6            | Linnea Vaines
+ 13 | 2021-11-10 |  8 | Feednation | Express 2500  | Dirk Tremellier
+ 14 | 2021-05-26 |  8 | Feednation | Express 2500  | Dirk Tremellier
+ 15 | 2021-03-27 |  2 | Wikizz     | Explorer      | Elianore Cruwys
+ 16 | 2021-07-29 |  7 | Agivu      | A6            | Linnea Vaines
+ 17 | 2021-04-01 | 13 | Reallinks  | Mazda5        | Urson Wabersinke
+ 18 | 2021-11-08 | 11 | Realmix    | Riviera       | Twila Gartside
+ 19 | 2021-02-02 | 19 | Einti      | Ram Van 2500  | Paolo Johnys
+ 20 | 2021-03-28 |  9 | Photojam   | Trans Sport   | Hale Remmer
+    |            | 20 | Ailane     | Ranger        | Kale Henrion
+    |            | 12 | Yotz       | V70           | Yuri Shovel
+    |            | 10 | Fivebridge | Jetta         | Jacklin Bennough
+    |            | 18 | Divape     | Roadmaster    | Vidovic Houliston
+    |            | 15 | Bubblebox  | E150          | Roxy Jovovic
+    |            |  5 | Jazzy      | GTO           | Maury Haire
+    |            |  4 | Cogilith   | Impala        | Corney Manhood
+    |            |  1 | Quatz      | Ion           | Liza Rosentholer
+    |            |  3 | Realcube   | Turbo Firefly | Elaine Rickets
+(29 lignes)
+
+voyage_db=# SELECT  vol.id,vol.jour, avion.* FROM vol left join avion on vol.avion_id=avion.id;
+ id |    jour    | id | compagnie  |    modele    |     capacite     
+----+------------+----+------------+--------------+------------------
+  1 | 2021-12-31 | 11 | Realmix    | Riviera      | Twila Gartside
+  2 | 2021-02-06 | 13 | Reallinks  | Mazda5       | Urson Wabersinke
+  3 | 2021-03-21 |  6 | Kayveo     | SLK55 AMG    | Letta Quarry
+  4 | 2021-05-04 |  8 | Feednation | Express 2500 | Dirk Tremellier
+  5 | 2021-07-10 | 16 | Eidel      | Milan        | Gabey Cammocke
+  6 | 2021-03-13 | 17 | Jabbercube | Legacy       | Dulcie Cromly
+  7 | 2021-03-03 | 11 | Realmix    | Riviera      | Twila Gartside
+  8 | 2021-06-30 | 14 | Layo       | XK           | Ulla Almond
+  9 | 2021-04-22 |  9 | Photojam   | Trans Sport  | Hale Remmer
+ 10 | 2021-05-15 | 19 | Einti      | Ram Van 2500 | Paolo Johnys
+ 11 | 2021-06-27 |  8 | Feednation | Express 2500 | Dirk Tremellier
+ 12 | 2021-04-16 |  7 | Agivu      | A6           | Linnea Vaines
+ 13 | 2021-11-10 |  8 | Feednation | Express 2500 | Dirk Tremellier
+ 14 | 2021-05-26 |  8 | Feednation | Express 2500 | Dirk Tremellier
+ 15 | 2021-03-27 |  2 | Wikizz     | Explorer     | Elianore Cruwys
+ 16 | 2021-07-29 |  7 | Agivu      | A6           | Linnea Vaines
+ 17 | 2021-04-01 | 13 | Reallinks  | Mazda5       | Urson Wabersinke
+ 18 | 2021-11-08 | 11 | Realmix    | Riviera      | Twila Gartside
+ 19 | 2021-02-02 | 19 | Einti      | Ram Van 2500 | Paolo Johnys
+ 20 | 2021-03-28 |  9 | Photojam   | Trans Sport  | Hale Remmer
+(20 lignes)
+
